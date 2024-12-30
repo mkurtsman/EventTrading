@@ -1,4 +1,4 @@
-package com.eventtrade.news;
+package com.eventtrade.model.news;
 
 import java.time.ZonedDateTime;
 
@@ -8,4 +8,6 @@ public interface News {
     String value();
     String forecast();
     String prev();
+
+
 }

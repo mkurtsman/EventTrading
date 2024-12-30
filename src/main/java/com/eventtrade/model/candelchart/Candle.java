@@ -1,6 +1,7 @@
-package com.eventtrade.candelchart;
+package com.eventtrade.model.candelchart;
 
 import java.time.ZonedDateTime;
+import java.util.Objects;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;
@@ -13,7 +14,7 @@ public record Candle(ZonedDateTime time, double open, double maximum, double min
                 open,
                 max(this.maximum, c.maximum),
                 min(this.minimum, c.minimum),
-                close,
+                c.close,
                 timeFrame
         );
     }
@@ -26,6 +27,15 @@ public record Candle(ZonedDateTime time, double open, double maximum, double min
         return  !isBull();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Candle candle = (Candle) o;
+        return Double.compare(open, candle.open) == 0 && Double.compare(close, candle.close) == 0 && Double.compare(maximum, candle.maximum) == 0 && Double.compare(minimum, candle.minimum) == 0 && Objects.equals(time, candle.time) && timeFrame == candle.timeFrame;
+    }
 
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(time, open, maximum, minimum, close, timeFrame);
+    }
 }
