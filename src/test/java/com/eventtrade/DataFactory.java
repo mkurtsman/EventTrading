@@ -3,7 +3,6 @@ package com.eventtrade;
 import com.eventtrade.model.candelchart.Candle;
 import com.eventtrade.model.news.News;
 
-import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.SortedMap;

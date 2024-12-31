@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import static com.eventtrade.DataFactory.bearCandle;
 import static com.eventtrade.DataFactory.bullCandle;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CandleTest {
 

@@ -7,7 +7,6 @@ import com.eventtrade.service.CalculationService;
 
 import java.time.ZonedDateTime;
 import java.util.SortedMap;
-import java.util.stream.Collector;
 
 public class CalculationServiceImpl implements CalculationService {
 

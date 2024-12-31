@@ -8,6 +8,12 @@ import static java.lang.Math.min;
 
 public record Candle(ZonedDateTime time, double open, double maximum, double minimum, double close , TimeFrame timeFrame) {
 
+    public static final String TIME = "time";
+    public static final String POSITIVE = "positive";
+    public static final String VALUE = "value";
+    public static final String FORECAST = "forecast";
+    public static final String PREV = "prev";
+
     public Candle add(Candle c){
         return new Candle(
                 time,

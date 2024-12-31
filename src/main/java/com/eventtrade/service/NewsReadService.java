@@ -7,6 +7,6 @@ import java.util.Collection;
 
 public interface NewsReadService {
     Collection<News> readHtml() throws IOException;
-    Collection<News> writeToCsv();
+    void writeToCsv(Collection<News> news);
     Collection<News> readCsv();
 }
