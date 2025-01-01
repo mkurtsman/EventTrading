@@ -11,9 +11,9 @@ class OutputNewsResultTest {
 
     @Test
     public void isContinuationTest(){
-        assertTrue(new OutputNewsResult(true, bullCandle(), bullCandle()).isContinuation());
-        assertTrue(new OutputNewsResult(true, bearCandle(), bearCandle()).isContinuation());
-        assertFalse(new OutputNewsResult(true, bullCandle(), bearCandle()).isContinuation());
-        assertFalse(new OutputNewsResult(true, bearCandle(), bullCandle()).isContinuation());
+        assertTrue(new OutputNewsResult(true, bullCandle(), bullCandle()).continuation());
+        assertTrue(new OutputNewsResult(true, bearCandle(), bearCandle()).continuation());
+        assertFalse(new OutputNewsResult(true, bullCandle(), bearCandle()).continuation());
+        assertFalse(new OutputNewsResult(true, bearCandle(), bullCandle()).continuation());
     }
 }

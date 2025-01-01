@@ -24,7 +24,7 @@ import static com.eventtrade.util.DateUtil.*;
 
 public class CandleReadServiceImpl implements CandleReadService {
 
-    public static final String CSV_FILE_NAME = "src/main/resources/EURUSD60.csv";
+    public static final String CSV_FILE_NAME = "src/main/resources/XAUUSD60.csv";
 
     @Override
     public Collection<Candle> readCsv() {

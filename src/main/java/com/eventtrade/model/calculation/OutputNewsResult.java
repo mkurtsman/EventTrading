@@ -4,7 +4,7 @@ import com.eventtrade.model.candelchart.Candle;
 
 public record OutputNewsResult (boolean positiveNews, Candle startCandle, Candle endCandle) {
 
-    public boolean isContinuation(){
+    public boolean continuation(){
         return startCandle.isBull() ^ endCandle.isBear();
     }
 }

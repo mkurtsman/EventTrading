@@ -4,5 +4,5 @@ import com.eventtrade.model.calculation.InputParams;
 import com.eventtrade.model.calculation.OutputNewsResult;
 
 public interface CalculationService {
-    OutputNewsResult calculate(InputParams inputParams);
+    void calculate();
 }
